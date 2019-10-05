@@ -785,6 +785,23 @@
     exenv "^1.2.2"
     prop-types "^15.6.2"
 
+"@stardust-ui/react-component-event-listener@~0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-event-listener/-/react-component-event-listener-0.38.0.tgz#1787faded94b40ad41226e6289baf13e701c6e7f"
+  integrity sha512-sIP/e0dyOrrlb8K7KWumfMxj/gAifswTBC4o68Aa+C/GA73ccRp/6W1VlHvF/dlOR4KLsA+5SKnhjH36xzPsWg==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    prop-types "^15.7.2"
+
+"@stardust-ui/react-component-ref@~0.38.0":
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-ref/-/react-component-ref-0.38.0.tgz#52d555f2d5edd213c923c93a106f7de940e427ef"
+  integrity sha512-xjs6WnvJVueSIXMWw0C3oWIgAPpcD03qw43oGOjUXqFktvpNkB73JoKIhS4sCrtQxBdct75qqr4ZL6JiyPcESw==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    prop-types "^15.7.2"
+    react-is "^16.6.3"
+
 "@svgr/babel-plugin-add-jsx-attribute@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.0.0.tgz#5acf239cd2747b1a36ec7e708de05d914cb9b948"
@@ -2304,6 +2321,14 @@ create-react-context@^0.2.2:
   dependencies:
     fbjs "^0.8.0"
     gud "^1.0.0"
+
+create-react-context@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.3.0.tgz#546dede9dc422def0d3fc2fe03afe0bc0f4f7d8c"
+  integrity sha512-dNldIoSuNSvlTJ7slIKC/ZFGKexBMBrrcc+TTe1NdmROnaASuLPvqpwj9v4XS4uXZ8+YPu0sNmShX2rXI5LNsw==
+  dependencies:
+    gud "^1.0.0"
+    warning "^4.0.3"
 
 cross-spawn@6.0.5, cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
@@ -5252,6 +5277,11 @@ lodash.uniq@^4.5.0:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
+lodash@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
 loglevel@^1.4.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
@@ -6191,6 +6221,11 @@ pnp-webpack-plugin@1.2.1:
   dependencies:
     ts-pnp "^1.0.0"
 
+popper.js@^1.14.4:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
+  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
+
 portfinder@^1.0.9:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"
@@ -6825,7 +6860,7 @@ prompts@^0.1.9:
     kleur "^2.0.1"
     sisteransi "^0.1.1"
 
-prop-types@^15.6.2:
+prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -7029,9 +7064,26 @@ react-is@^16.6.0, react-is@^16.7.0:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
 
+react-is@^16.6.3, react-is@^16.8.6:
+  version "16.10.2"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.10.2.tgz#984120fd4d16800e9a738208ab1fba422d23b5ab"
+  integrity sha512-INBT1QEgtcCCgvccr5/86CfD71fw9EPmDxgiJX4I2Ddr6ZsV6iFXsuby+qWJPtmNuMY0zByTsG4468P7nHuNWA==
+
 react-is@^16.8.1:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
+
+react-popper@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.3.4.tgz#f0cd3b0d30378e1f663b0d79bcc8614221652ced"
+  integrity sha512-9AcQB29V+WrBKk6X7p0eojd1f25/oJajVdMZkywIoAV6Ag7hzE1Mhyeup2Q1QnvFRtGQFQvtqfhlEoDAPfKAVA==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    create-react-context "^0.3.0"
+    popper.js "^1.14.4"
+    prop-types "^15.6.1"
+    typed-styles "^0.0.7"
+    warning "^4.0.2"
 
 react-router-dom@^5.0.0:
   version "5.0.0"
@@ -7544,20 +7596,25 @@ selfsigned@^1.9.1:
 semantic-ui-css@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.4.1.tgz#f5aea39fafb787cbd905ec724272a3f9cba9004a"
+  integrity sha512-Pkp0p9oWOxlH0kODx7qFpIRYpK1T4WJOO4lNnpNPOoWKCrYsfHqYSKgk5fHfQtnWnsAKy7nLJMW02bgDWWFZFg==
   dependencies:
     jquery x.*
 
-semantic-ui-react@^0.86.0:
-  version "0.86.0"
-  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.86.0.tgz#f3c6a27250f2e9e07a975d0a3399ffd3a48861b5"
+semantic-ui-react@^0.88.1:
+  version "0.88.1"
+  resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.88.1.tgz#006d63f838b651370d68e73510327308f19ff6fd"
+  integrity sha512-fCCDnRXiVJUJ9icFVSu0n0pZ2cg2QssiLM2nP4pz6aODQpPZTPtXVI6V/hFciwJ+GPkV6WZAmEmFLxR7nRVF4Q==
   dependencies:
     "@babel/runtime" "^7.1.2"
     "@semantic-ui-react/event-stack" "^3.1.0"
+    "@stardust-ui/react-component-event-listener" "~0.38.0"
+    "@stardust-ui/react-component-ref" "~0.38.0"
     classnames "^2.2.6"
     keyboard-key "^1.0.4"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-is "^16.7.0"
+    lodash "^4.17.15"
+    prop-types "^15.7.2"
+    react-is "^16.8.6"
+    react-popper "^1.3.4"
     shallowequal "^1.1.0"
 
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
@@ -8320,6 +8377,11 @@ type-is@~1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.18"
 
+typed-styles@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/typed-styles/-/typed-styles-0.0.7.tgz#93392a008794c4595119ff62dde6809dbc40a3d9"
+  integrity sha512-pzP0PWoZUhsECYjABgCGQlRGL1n7tOHsgwYv3oIiEpJwGhFTuty/YNeduxQYzXXa3Ge5BdT6sHYIQYpl4uJ+5Q==
+
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
@@ -8561,6 +8623,13 @@ walker@~1.0.5:
   resolved "https://registry.yarnpkg.com/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
   dependencies:
     makeerror "1.0.x"
+
+warning@^4.0.2, warning@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
+  dependencies:
+    loose-envify "^1.0.0"
 
 watch@~0.18.0:
   version "0.18.0"
