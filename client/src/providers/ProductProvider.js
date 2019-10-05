@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const DepartmentContext = React.createContext();
+const ProductContext = React.createContext();
 
-export const DepartmentConsumer = DepartmentContext.Consumer;
+export const ProductConsumer = ProductContext.Consumer;
 
-class DepartmentProvider extends Component {
-  state = { departments: [] }
+class ProductProvider extends Component {
+  state = { products: [] }
 
   componentDidMount() {
-    axios.get('/api/departments')
+    axios.get('/departments/:department_id/products')
       .then( res => {
-        this.setState({ departments: res.data })
+        this.setState({ products: res.data })
       })
       .catch( err => {
          console.log(err)
@@ -45,29 +45,22 @@ class DepartmentProvider extends Component {
   //     })
   // }
 
-  deleteDepartment = (id) => {
-    axios.delete(`/api/departments/${id}`)
-      .then( res => {
-        const { departments } = this.state
-        this.setState({ departments: departments.filter( d => d.id !== id ) })
-      })
-      .catch( err => {
-        console.log(err)
-      })
+  deleteProduct = (department_id, id) => {
+    return axios.delete(`/api/departments/${department_id}/products/${id}`)
   }
 
   render() {
     return (
-      <DepartmentContext.Provider value={{
+      <ProductContext.Provider value={{
         ...this.state,
-        updateDepartment: this.updateDepartment,
-        deleteDepartment: this.deleteDepartment
+        updateProduct: this.updateProduct,
+        deleteProduct: this.deleteProduct
 
       }}>
         { this.props.children }
-      </DepartmentContext.Provider>
+      </ProductContext.Provider>
     )
   }
 }
 
-export default DepartmentProvider;
+export default ProductProvider;
