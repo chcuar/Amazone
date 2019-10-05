@@ -15,8 +15,11 @@ class Api::DepartmentsController < ApplicationController
   
     def update
       department = current_user.departments.find(params[:id])
-      department.update(complete: !department.complete)
-      render json: department
+      if department.update(department_params)
+        render json: department
+      else
+        render json: { errors: department.errors }, status: :unprocessable_entity 
+      end
     end
   
     def destroy
