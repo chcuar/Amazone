@@ -3,7 +3,9 @@ import axios from 'axios';
 import { Header } from 'semantic-ui-react';
 import Department from './Department/Department';
 import DepartmentList from './Department/DepartmentList';
-import { Container } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react';
+import DepartmentForm from './Department/DepartmentForm';
+
 
 class Home extends Component {
 
@@ -13,6 +15,7 @@ class Home extends Component {
         <Header>Department</Header>
         <Container style={{ padding: "30px 0" }}>
         <Department />  
+        <DepartmentForm />
         {/* <DepartmentForm addItem={this.addItem} />
         <br />
         <br />
@@ -22,9 +25,6 @@ class Home extends Component {
           deleteDepartment={this.deleteDepartment}
         /> */}
       </Container>
-    );
-  }
-}
       </>
     )
   }
