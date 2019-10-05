@@ -2,17 +2,23 @@ import React from "react";
 import { Form, } from "semantic-ui-react";
 import { DepartmentConsumer } from '../../providers/DepartmentProvider';
 
-class DepartmentForm extends React.Component {
+class DepartmentEditForm extends React.Component {
   state = { title: "" };
 
-  componentDidMount(){
-    console.log(this.props)
+  componentDidMount() {
+    if (this.props.id)
+      this.setState({ title: this.props.title});
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.addDepartment(this.state);
-    this.setState({ title: "" });
+    if (this.props.id) {
+      this.props.edit( this.props.id, {...this.state} );
+      this.props.toggleEdit()
+    } else {
+      this.props.add(this.state);
+    }
+    this.setState({ title: "", body: "", });
   }
 
   handleChange = (e) => {
@@ -37,12 +43,12 @@ class DepartmentForm extends React.Component {
   }
 };
 
-const ConnectedDepartmentForm = (props) => {
+const ConnectedDepartmentEditForm = (props) => {
   return (
     <DepartmentConsumer>
-      {value => <DepartmentForm {...props} {...value} />}
+      {value => <DepartmentEditForm {...props} {...value} />}
     </DepartmentConsumer>
   )
 }
 
-export default ConnectedDepartmentForm;
+export default ConnectedDepartmentEditForm;

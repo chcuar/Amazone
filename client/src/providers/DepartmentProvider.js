@@ -6,7 +6,7 @@ const DepartmentContext = React.createContext();
 export const DepartmentConsumer = DepartmentContext.Consumer;
 
 class DepartmentProvider extends Component {
-  state = { departments: [] }
+  state = { departments: [],  editing: false,}
 
   componentDidMount() {
     axios.get('/api/departments')
@@ -18,32 +18,30 @@ class DepartmentProvider extends Component {
       })
   }
 
-  // addDepartment = (incommingDepartment) => {
-  //   const item = incommingTodo
-  //   axios.post('/api/items', { item })
-  //     .then( res => {
-  //       const { todos } = this.state
-  //       this.setState({ todos: [ ...todos, res.data ] })
-  //     })
-  //     .catch( err => {
-  //       console.log(err)
-  //    })
-  // }
+  addDepartment = (department) => {
+    axios.post('/api/departments', department )
+      .then( res => {
+        const { departments } = this.state;
+        this.setState({ departments: [...departments, res.data] });
+      })
+  }
 
-  // updateTodo = (id, item) => {
-  //   axios.put(`/api/items/${id}`, { item })
-  //     .then( res => {
-  //       const todos = this.state.todos.map( t => {
-  //         if (t.id === id)
-  //           return res.data
-  //         return t
-  //       })
-  //       this.setState({ todos })
-  //     })
-  //     .catch( err => {
-  //       console.log(err)
-  //     })
-  // }
+  updateDepartment = (id, department) => {
+    axios.put(`/api/departments/${id}`, {department})
+      .then( res => {
+        const departments = this.state.departments.map( d => {
+          if (d.id === id)
+            return res.data
+          return d
+        })
+        this.setState({ departments })
+      })
+      .catch( err => {
+        alert(err)
+      })
+  }
+
+  toggleEdit = () => this.setState({ editing: !this.state.editing, });
 
   deleteDepartment = (id) => {
     axios.delete(`/api/departments/${id}`)
@@ -61,7 +59,12 @@ class DepartmentProvider extends Component {
       <DepartmentContext.Provider value={{
         ...this.state,
         updateDepartment: this.updateDepartment,
+
         deleteDepartment: this.deleteDepartment
+        addDepartment: this.addDepartment,
+        deleteDepartment: this.deleteDepartment,
+        toggleEdit: this.toggleEdit,
+
 
       }}>
         { this.props.children }
