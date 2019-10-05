@@ -59,9 +59,12 @@ class DepartmentProvider extends Component {
       <DepartmentContext.Provider value={{
         ...this.state,
         updateDepartment: this.updateDepartment,
+
+        deleteDepartment: this.deleteDepartment
         addDepartment: this.addDepartment,
         deleteDepartment: this.deleteDepartment,
         toggleEdit: this.toggleEdit,
+
 
       }}>
         { this.props.children }
