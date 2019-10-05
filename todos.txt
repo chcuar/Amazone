@@ -1,0 +1,35 @@
+OBJECTIVES
+Use rails new to create a new rails app for Amazone.
+Rails Devise Token Auth for user, provided in the starter file
+Create a model of Department with title.
+Create a model of Product with name, description, price, stock.
+User has may departments, departments belongs to user
+Department has many products and products belongs to Department.
+Controller, CRUD department.
+Controller, CRUD product.
+Rails routes for api for all models.
+Create and connect React Client side in the rails Amazone app.
+Components for Client side CRUD department.
+Components for Client side CRUD product.
+Use React Router for front end routes
+Make your website responsive via media queries, grid, or css framework.
+
+
+
+
+
+
+
+
+
+BONUS OBJECTIVES
+Create a model of Reviews with subject, body, stars, date.
+Products has many Reviews and reviews belongs to product.
+Controller, CRUD review.
+Components for Client side CRUD review.
+A vote up and down for reviews
+Add Product to cart
+Checkout
+Display name of user on reviews
+Braintree Payments
+Mailers
