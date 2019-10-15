@@ -60,7 +60,7 @@ class DepartmentProvider extends Component {
         ...this.state,
         updateDepartment: this.updateDepartment,
 
-        deleteDepartment: this.deleteDepartment
+        deleteDepartment: this.deleteDepartment,
         addDepartment: this.addDepartment,
         deleteDepartment: this.deleteDepartment,
         toggleEdit: this.toggleEdit,

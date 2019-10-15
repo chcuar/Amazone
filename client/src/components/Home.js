@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Header } from 'semantic-ui-react';
 import Department from './Department/Department';
 import Product from './Product/Product';
-import DepartmentList from './Department/DepartmentList';
+// import DepartmentList from './Department/DepartmentList';
 import { Container } from 'semantic-ui-react';
 import DepartmentForm from './Department/DepartmentForm';
 
